@@ -20,3 +20,7 @@ H * * * * -> every 1 hour
 
 Task 7:GitHub Scm Polling for push. Goto Helloworld GitHub path , settings page. Goto Webhooks -> Add Webhook -> 
 http://<IP address>:8080/github-webhook/ 
+also select type as URL encoded 
+Task 8: start/stop/restart Jenkins in ubuntu
+sudo service jenkins stop
+sudo service jenkins restart
