@@ -1,0 +1,22 @@
+Task 1: Create a freestyle job in Jenkins. We are using a HelloWorld Project created in the git hub path https://github.com/AnjuMeleth/HelloWorld.git
+
+Task 2: Set the "Discard Old Builds" flag in General tab of freestyle project.
+Set the log rotation to 1 day and 2 builds .Wait for some time for Jenkins to show the changes
+
+Task 3: Run a freestyle project from a different branch in the same GitHub pathMention the branches to build in Source Code Management tab as */version1. See the difference in the control tab
+
+Task 4: Run the build with a parameter
+Select The project is parametrised flag in General tab. Select String Parameter Default value as CGI .Repeat the step with another value "QuadraLogics"
+
+Task 5: Disable build flag is enabled hiding the build now option. You need to enable it to perform build
+
+Task 6: 
+Build Periodically flag is setup to run the task in a specified time
+TZ=Asia/Kolkata
+* * * * *
+run the task every 1 minute
+TZ=Asia/Kolkata
+H * * * * -> every 1 hour
+
+Task 7:GitHub Scm Polling for push. Goto Helloworld GitHub path , settings page. Goto Webhooks -> Add Webhook -> 
+http://<IP address>:8080/github-webhook/ 
