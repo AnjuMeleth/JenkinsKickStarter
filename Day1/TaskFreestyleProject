@@ -24,3 +24,8 @@ also select type as URL encoded
 Task 8: start/stop/restart Jenkins in ubuntu
 sudo service jenkins stop
 sudo service jenkins restart
+
+Task 8: Enable "Add time stamp to console output" and see the time appended in the console output
+
+Task 9: Enable "delete workspace when build is done" and see the workspace getting deleted in the /var/lib/jenkins/workspace folder
+
