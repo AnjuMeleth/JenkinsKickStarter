@@ -12,3 +12,4 @@ Task 5 : Create a freestyle project for packaging the application
 Task 6: Create a pipeline project for spring pet clinic application. Before creating the project perform below steps
 apt-get install docker.io
 usermod -aG docker jenkins
+Restart the jenkins
