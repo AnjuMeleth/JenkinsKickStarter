@@ -1,0 +1,14 @@
+Task 1 : Create a freestyle project in Jenkins to build a maven application.
+Use "invoke top level maven targets" as "compile" in build section
+
+Task 2 : Create a freestyle project to create a QAUnitTest job using Junit Attachment Plugin.Use maven target as test.
+
+Task 3: Create a pipeline view using build pipeline plugin . Provide the starting job 
+
+Task 4 : Warnings Next Generation Plugin
+Create a DevCodeReview job using the above plugin.Select "Record compiler warnings and statis analysis results" from Post build actions . Select PVS-studio as tool .
+
+Task 5 : Create a freestyle project for packaging the application 
+Task 6: Create a pipeline project for spring pet clinic application. Before creating the project perform below steps
+apt-get install docker.io
+usermod -aG docker jenkins

@@ -7,5 +7,5 @@ sudo apt-get update
 sudo apt-get -y install jenkins
 # goto jenkins dashboard @ http://<Ipaddress>:8080
 # Get the unlock admin password by doing the below command
-cat /var/lib/jenkins/secrets/initialAdminPassword
+#cat /var/lib/jenkins/secrets/initialAdminPassword
 # install suggested plugins and create first admin password
