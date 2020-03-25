@@ -16,6 +16,7 @@ node{
      withMaven(
         // Maven installation declared in the Jenkins "Global Tool Configuration"
         maven: 'M3'){
+sh 'mvn -B -V -U -e clean package'
 }
 }
 }
