@@ -1,0 +1,30 @@
+import hudson.model.*
+import hudson.EnvVars
+import groovy.json.JsonSlurperClassic
+import groovy.json.JsonBuilder
+import groovy.json.JsonOutput
+import java.net.URL
+
+
+node{
+ stage('Checkout') {
+ git 'https://github.com/AnjuMeleth/AddressBook.git'
+
+ }
+ stage('Build') {
+ dir('') {
+     withMaven(
+        // Maven installation declared in the Jenkins "Global Tool Configuration"
+        maven: 'M3'){
+}
+}
+}
+stage ('Email') { 
+emailext attachLog: true, body: 'The status of the build can be obtained from the build log attached', subject: 'The build update is ', to: 'anjurose.d@gmail.com'
+}
+stage('clean up') {
+ echo "cleaning up the workspace"
+ // cleanWs()
+ }
+}// node
+

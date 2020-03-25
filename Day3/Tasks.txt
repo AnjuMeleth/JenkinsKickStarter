@@ -1,0 +1,4 @@
+Task1: Create a scripted pipeline for addressbook application. For details refer scripted_pipeline.txt in this path
+Use Pipeline Maven integration Plugin
+
+Task2: Create a Jenkinsfile for a spring pet clinic application and build it
