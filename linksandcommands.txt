@@ -1,0 +1,78 @@
+# Ansible installation
+==============================
+# https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
+# password less connection
+    4  ssh-keygen -t rsa
+    8  ssh root@<ipaddress of slave> mkdir -p .ssh
+    9  cat .ssh/id_rsa.pub | ssh root@<ipaddress of slave> 'cat >> .ssh/authorized_keys'
+   10  ssh root@<ipaddress of slave> "chmod 700 .ssh; chmod 640 .ssh/authorized_keys"
+   11  ssh root@<ipaddress of slave>
+       sudo apt-add-repository ppa:ansible/ansible 
+       sudo apt-get update
+   13  sudo apt-get install ansible
+   14  ansible --version
+   17  vi /etc/ansible/hosts  # enter ipaddress of the slave in the hosts file
+   20  vi /etc/hosts # enter details of the slave ip address on the ansible master
+   21  ansible -m ping node1 
+
+# Adding a user to the Ansible host
+======================================
+   42  ansible -m ping all
+   43  ansible -b -k -m user -a 'name=demo' node1
+   45  ansible -b -m user -a 'name=demo1' node1
+   46  ansible -m user -a 'name=demo2' node1
+   47  ansible -m service -a 'name=apache2 state=started' node1
+   49  ansible -m package -a 'name=nginx state=present' node1
+   50  ansible -m service -a 'name=nginx state=started' node1
+   51  ansible -m setup node1
+
+# vi /etc/passwd at the ansible hosts to see the users
+
+# Installing ntp service
+===================================
+   55  vi playbook1.yml
+   56  ansible-playbook playbook1.yml
+# installing nginx service
+==============================
+   61  ansible-galaxy init demo-role
+   62  ls
+   63  cd demo-role/
+   64  ls
+   65  cd /etc/ansible/
+   66  ls
+   67  cd roles
+   68  ls
+   69  cd demo-role/tasks
+   70  ls
+   71  vi main.yml
+   72  cd ../handlers
+   73  ls
+   74  vi main.yml
+   75  cd ../../../
+   76  ls
+   77  vi RolesDemo.yml
+   78  cd roles
+   79  cd demo-role/files
+   80  ls
+   81  vi index.html
+   82  cd ../../../
+   83  pwd
+   84  ansible-playbook RolesDemo.yml
+# installing Docker
+============================
+  138  ansible-galaxy init inclassProj
+  139  ls
+  140  cd inclassProj/tasks
+  141  vi main.yml
+  142  cd ../../../
+  143  vi Devops.yml
+  144  ansible-playbook Devops.yml
+  
+  #https://www.redhat.com/en/blog/integrating-ansible-jenkins-cicd-process => ansible and Jenkins
+  # https://www.digitalocean.com/community/tutorials/how-to-create-ansible-playbooks-to-automate-system-configuration-on-ubuntu => nginx on ansible
+  
+  
+
+
+
+
