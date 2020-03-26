@@ -1,0 +1,23 @@
+Task 1 : Publish the JUnit test report with "Archive Junit formatted test results"  for spring petclinic application. Test Report xml as "target/surefire-reports/TEST-*.xml"
+Use junit 'target/sure-fire-reports/Test-*.xml'
+
+Task 2: Use HTML Publisher plugin and publish HTML reports
+Generate snippet for Publish HTML Reports
+HTML directory "target/site/jacoco"
+Use publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/site/jacoco', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+
+Task3 : Back up Jenkins
+Perform the command in .jenkins folder in your home directory
+ tar -czf jenkins_home.tgz jenkins/
+ ls
+ tar -tzf jenkins_home.tgz | head
+ scp
+ tar -xzf jenkins_home.tgz
+ Copy the installation file to the target system
+ and do java -jar jenkins.war that make use of Jenkins folder
+
+Task5 : Repeat with Ansible plugin. Create a freestyle job give playbook file name as $WORKSPACE/playbook.yml
+and hosts in inventory file 
+Run as a root user
+
+
