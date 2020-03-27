@@ -1,0 +1,21 @@
+Task1: Create a job with ansible plugin and use "$WORKSPACE/petclinic.yml" as the playbook file and hosts as the inventory file attached in the GitHub path.
+Use the credentials of the ansible slave.
+
+Task2 : Install " Backup plugin" . Then you will be able to find the " Backup manager" in the Manage Jenkins.Click on "setup".Yo can provide a path for backup as "/tmp/Backup". Provide the Backup directory and whenever you want to restore you can use "Rsetore Hudson Configuration"
+
+
+Task3 : Send Slack notifiactions just like email by installing "Slack Notification Plugin" .In the snippet generator you can find the pipeline code
+
+Task4 : Install "Blue Ocean Aggregate Plugin" . You will be able to find the Blue ocean link in the Jenkins dashboard.
+
+Task 5: Install Pipeline : AWs Steps. Yo will be able to find the AWS credentials tab in the credentilas section. Give the Access key and secret access key.
+
+Task 6 : Create a new user from Manage Jenkins -> Manage User -> Create user
+Goto Manage Jenkins -> Global security - > Select Matrix based - > Add admin user with administer right and new user as having overall read access and create a job access only. Then try to create a new job and see the difference.
+
+If you have completely locked out change the security setting in config.xml file in /var/lib/jenkins/config.xml to false.
+`<useSecurity>true</useSecurity>`
+Then you will be able to access the dashboard.
+Restart the jenkins server
+
+Task 7:  Limit the number of executors in Jenkins in Manage Jenkins -> Manage nodes> Settings  and see the difference.

@@ -16,8 +16,5 @@ Perform the command in .jenkins folder in your home directory
  Copy the installation file to the target system
  and do java -jar jenkins.war that make use of Jenkins folder
 
-Task5 : Repeat with Ansible plugin. Create a freestyle job give playbook file name as $WORKSPACE/playbook.yml
-and hosts in inventory file 
-Run as a root user
 
 
